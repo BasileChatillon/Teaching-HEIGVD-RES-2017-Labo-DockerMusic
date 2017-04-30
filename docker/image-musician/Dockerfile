@@ -1,4 +1,4 @@
-FROM node:4.10.2
+FROM node:latest
 MAINTAINER Basile Châtillon <basile.chatillon@heig-vd.ch>
 
 #

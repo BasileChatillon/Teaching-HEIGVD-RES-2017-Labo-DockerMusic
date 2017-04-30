@@ -12,7 +12,7 @@
   },
   "author": "Basile Châtillon",
   "dependencies": {
-	"uuid":^"3.0.1",
-	"dgram":^"1.0.1"
+	"uuid":"^3.0.1",
+	"dgram":"^1.0.1"
   }
 }

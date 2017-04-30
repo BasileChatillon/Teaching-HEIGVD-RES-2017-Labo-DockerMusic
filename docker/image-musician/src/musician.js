@@ -52,7 +52,7 @@ Musician.prototype.send = function(){
 	 * Definition of the things to send 
 	 */
 	var toSend = {
-		uuid: 		 this.uuid,
+		uuid: 		 this.Muuid,
 		instrument:  this.instrument,
 		sound:		 this.sound,
 		activeSince: this.activeSince
@@ -61,7 +61,7 @@ Musician.prototype.send = function(){
 	var payload = JSON.stringify(toSend)
 	message = new Buffer(payload);
 	/* Sending the message */
-	socket.send(message, 0, message.length, protocol.PROTOCOL_PORT, protocol.PROTOCOL_MULTICAST_ADDRESS, function(err, bytes) {
+	socket.send(message, 0, message.length, protocol.PROTOCOL_PORT_UDP, protocol.PROTOCOL_MULTICAST_ADDRESS, function(err, bytes) {
 		console.log("Sending payload: " + payload + " via port " + socket.address().port);
 	});
 }
